@@ -1,0 +1,30 @@
+subTtl = 0;	// subtotal
+gndTtl = 0; // grandtotal
+
+function calcTtl(num1, num2){
+	// num1 is the price of the burger
+  // num2 is the number of burgers
+   let sum = 0;
+  // for how many burgers are ordered
+  for(i = 0; i < num2; i++){
+  	// add the price for each burger
+			  sum = (sum+num1);
+        subTtl = sum;
+  }
+	return subTtl;
+}
+
+calcTtl(12,3)
+console.log(subTtl);
+
+function taxCalc(subTtl){	
+	// take in the subtotal
+  // multiply subttl to state tax
+  let pdt =(subTtl * 0.08)
+  // add tax to actual total
+  gndTtl=(pdt + subTtl);
+  return gndTtl;
+}
+
+taxCalc(subTtl);
+console.log(gndTtl);
